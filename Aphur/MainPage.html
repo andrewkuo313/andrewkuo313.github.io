@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- <script src="MainPageJS.js"></script>-->
+<script src="jquery.js"></script>
+<script>
+$(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+
+function removeFragment()
+{
+	window.location.replace("#");   
+	if (typeof window.history.replaceState == 'function') {
+  history.replaceState({}, '', window.location.href.slice(0, -1));
+}}
+</script>
+<title>Aphur</title>
+<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+<link rel="stylesheet" type="text/css" href="MainPageCSS.css">
+</head>
+<!-- maybe delete img w h -->
+<body style="margin: 0;">
+<div id="loader"></div>
+<div id="page1" class="outer">
+<img src="img/circle.png" width="870" height="870" id="circle">
+<img src="img/title.png" width="765" height="765" id="title">
+<img src="img/char.png" width="656" height="1000" id="char">
+</div>
+<div id="page2" class="outer">
+<div class="inner">
+<p class="bigTitle">
+Aphur 是什麼？
+</p>
+<img src="img/gamedemo.png" width="1060" height="600" id="gameDemo" class="insideImage">
+<p class="insideTitle">
+Aphur 為一款策劃中的國產音樂遊戲，主打與傳統下落式的結合，音符由中間產生，移往兩邊的判定線。
+</p>
+</div>
+</div>
+<div id="page3" class="outer">
+<div class="inner">
+<p class="bigTitle">
+劇情模式
+</p>
+<img src="img/storydemo.png" width="1424" height="800" id="storyDemo" class="insideImage">
+<p class="insideTitle" style="font-size: 1.5vmax;">
+在這座島嶼中，有一棵巨大神木，妖精和矮人們能夠輕鬆地使用魔法全靠這棵神木，而神木位於妖精的森林裡，因此幾乎都是妖精們在照顧神木，神木所需要的養分聖水，必須從遠方寒冷島嶼中的一片湖中取得，由於神木的力量有限，使得人們在距離遙遠的地方無法使用魔法，因此每年妖精族都會趁冰龍不在時冒險進入取得，矮人們十分感謝他們......
+</p>
+</div>
+</div>
+<div id="page4" class="outer">
+<div class="inner">
+<p class="bigTitle">
+聯絡我們
+</p>
+<a target="_blank" href="http://facebook.com">
+<img src="img/facebook.png" width="128" height="128" class="socialIcon">
+</a>
+<a target="_blank" href="http://twitter.com">
+<img src="img/twitter.png" width="128" height="128" class="socialIcon">
+</a>
+<a target="_blank" href="http://youtube.com">
+<img src="img/youtube.png" width="128" height="128" class="socialIcon">
+</a>
+</div>
+</div>
+<div id="page5" class="outer">
+<div class="inner">
+<a target="_blank" href="http://home.gamer.com.tw/">
+<p class="bigTitle">
+徵人啟事
+</p>
+</a>
+</div>
+</div>
+<nav>
+<a href="#page1" run="removeFragment()">
+<img src="img/homepage.png" width="128" height="128" class="navicon">
+</a>
+<a href="#page2" run="removeFragment()">
+<img src="img/icon.png" width="128" height="128" class="navicon">
+</a>
+<a href="#page3" run="removeFragment()">
+<img src="img/books-stack-of-three.png" width="128" height="128" class="navicon">
+</a>
+<a href="#page4" run="removeFragment()">
+<img src="img/phone-contact.png" width="128" height="128" class="navicon">
+</a>
+<a href="#page5" run="removeFragment()">
+<img src="img/employment-deal.png" width="128" height="128" class="navicon">
+</a>
+</nav>
+</body>
+</html>

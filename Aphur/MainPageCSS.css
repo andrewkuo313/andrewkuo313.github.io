@@ -1,0 +1,217 @@
+html
+{
+	font-family: "微軟正黑體", "Microsoft JhengHei";
+}
+
+::-webkit-scrollbar 
+{
+    width: 0;
+    height: 0;
+}
+
+.outer
+{
+	/*the fucking vertical in fact didn't center but i don't give a shit anymore*/
+	width: 100vw;
+	height: 100vh;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	background-position: center;
+	text-align: center;
+	font-size: 0;
+	margin: 0 0;
+}
+
+#page1
+{
+	background-image: url(img/bg1.jpg);
+}
+
+#page2
+{
+	background-image: url(img/bg2.jpg);
+}
+
+.outer:before
+{
+	content: "";
+  	height: 100vh;
+  	display: inline-block;
+  	vertical-align: middle;
+}
+
+.inner
+{
+	display: inline-block;
+  	vertical-align: middle;
+}
+
+#page3
+{
+	background-image: url(img/bg3.jpg);
+}
+
+#page4
+{
+	background-image: url(img/bg4.jpg);
+}
+
+#page5
+{
+	background-image: url(img/bg5.jpg);
+}
+
+nav
+{
+	position: fixed;
+	float: left;
+	bottom: 5vmin;
+	-webkit-animation: NavFrames 1s ease-out forwards,OpacityFrames 1s ease-in forwards;
+	animation: NavFrames 1s ease-out forwards,OpacityFrames 1s ease-in forwards;
+}
+
+.navicon
+{
+	float: left;
+	width: 7vmin;
+	height: 7vmin;
+	margin: 0px 2vmin;
+}
+
+#circle , #title
+{
+	position: absolute;
+	width: 45vmin;
+    height: 45vmin;
+	-webkit-animation: LogoFrames 1s ease-out forwards,OpacityFrames 1s ease-in forwards;
+	animation: LogoFrames 1s ease-out forwards,OpacityFrames 1s ease-in forwards;
+}
+
+@keyframes NavFrames
+{
+	from 
+	{
+		right: -30vmin;
+	}
+	to
+	{
+		right: 5vmin;
+	}
+}
+
+@keyframes LogoFrames
+{
+	from 
+	{
+		top: -10vmin;
+		right: -10vmin;
+	}
+	to
+	{
+		top: 10vmin;
+		right: 10vmin;
+	}
+}
+
+@keyframes OpacityFrames
+{
+	from
+	{
+		opacity: 0;
+	}
+	to
+	{
+		opacity: 1;
+	}
+}
+
+@keyframes CharacterFrames
+{
+	from 
+	{
+		left: 5vw;
+	}
+	to
+	{
+		left: 0vw;
+	}
+}
+
+#char
+{
+	position: absolute;
+	width: 39.36vmin;
+    height: 60vmin;
+	bottom: 0;
+	-webkit-animation: CharacterFrames 1s ease-out forwards,OpacityFrames 1s ease-in forwards;
+	animation: CharacterFrames 1s ease-out forwards,OpacityFrames 1s ease-in forwards;
+}
+
+#gameDemo
+{
+	width: 79.5vmin;
+    height: 45vmin;
+}
+
+#storyDemo
+{
+	width: 71.2vmin;
+	height: 40vmin;
+}
+
+.bigTitle
+{
+	position: relative;
+	font-size: 8vmin;
+	color: #FFF;
+	text-shadow: 0 0 20px #0FF;
+	margin: 3vh 0;
+	font-weight: bold;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.insideImage
+{
+	position: relative;
+    margin: 3vh 0;
+	border: 2px solid #FFF;
+    border-radius: 10px;
+	outline: none;
+    border-color: #FFF;
+    box-shadow: 0 0 30px #FFF;
+}
+/*if scale down it will split out*/
+.insideTitle
+{
+	line-height: 8vmin;
+	font-size: 3vmax;
+	color: #FFF;
+	text-shadow: 0 0 10px #FF0;
+	width: 90vw;
+	height: 20vh;
+	position: relative;
+	margin: 3vh 0;
+}
+
+.socialIcon
+{
+	display: inline-block;
+	margin: 10vh 5vw;
+	position: relative;
+	width: 20vmin;
+	height: 20vmin;
+	-webkit-transition: width 1s , height 1s;
+    transition: width 1s , height 1s;
+}
+
+.socialIcon:hover
+{
+	width: 30vmin;
+	height: 30vmin;
+}
